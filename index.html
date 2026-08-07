@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Surprise ❤️</title>
+    <meta name="description" content="A beautiful interactive Happy Birthday website filled with memories, love, celebration, and special moments.">
+    <!-- Open Graph SEO Metadata -->
+    <meta property="og:title" content="Happy Birthday Surprise ❤️">
+    <meta property="og:description" content="A beautiful interactive Happy Birthday website filled with memories, love, celebration, and special moments.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/images1.jpeg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Welcome Loader -->
+    <div id="welcome-loader">
+        <div class="loader-content">
+            <div class="loader-icon-wrapper">
+                <span class="birthday-emoji">🎂</span>
+            </div>
+            <h2 class="loader-text">Welcome To A Special Birthday Surprise</h2>
+            <p class="loader-subtext">Ku soo dhawoow farxad gaar ah ❤️</p>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+
+    <!-- High-Performance Canvas Effects (Fireworks, Confetti, Hearts, Flower Petals, Night Sky) -->
+    <canvas id="canvas-effects"></canvas>
+
+    <!-- Legacy Background Effects -->
+    <div id="bg-effects"></div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="bg-music" src="music/happy-birthday.mp3"></audio>
+
+    <!-- Floating Advanced Music Controller -->
+    <div id="music-controller" class="glass-card">
+        <div class="music-info">
+            <i class="fas fa-music pulse-icon"></i>
+            <span class="music-title">Happy Birthday Song</span>
+            <div class="equalizer">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+        </div>
+        <div class="music-controls">
+            <button id="mc-play" class="mc-btn" aria-label="Play/Pause"><i class="fas fa-play"></i></button>
+            <button id="mc-mute" class="mc-btn" aria-label="Mute/Unmute"><i class="fas fa-volume-up"></i></button>
+            <button id="mc-loop" class="mc-btn active" aria-label="Loop"><i class="fas fa-redo"></i></button>
+        </div>
+        <div class="music-sliders">
+            <div class="slider-group">
+                <span id="mc-current-time">0:00</span>
+                <input type="range" id="mc-progress" min="0" max="100" value="0">
+                <span id="mc-duration">0:00</span>
+            </div>
+            <div class="slider-group volume-group">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="mc-volume" min="0" max="1" step="0.01" value="0.5">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section 1: Hero Section -->
+        <section id="home" class="hero section-padding">
+            <div class="hero-content scroll-reveal fade-right">
+                <h1 class="main-heading">Happy Birthday 🎉</h1>
+                <h2 class="sub-heading">Dhalasho Wacan ❤️</h2>
+                <p class="hero-text">
+                    Maanta waa maalin gaar ah oo farxad iyo dabaaldeg mudan. Waxaan kuu rajaynayaa caafimaad, farxad, guul iyo nolol qurux badan. Ilaahay ha kuu sahlo dhammaan riyooyinkaaga.<br><br>
+                    Today is your special day. May your life always be filled with happiness, love, success, peace and unforgettable memories. May all your dreams come true.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#cake" class="btn btn-primary ripple-btn">Celebrate Now 🎉</a>
+                    <a href="#memories" class="btn btn-secondary ripple-btn">View Memories 📸</a>
+                </div>
+            </div>
+            <div class="hero-image-container scroll-reveal fade-left">
+                <div class="glass-card image-card hover-lift">
+                    <img src="images/images1.jpeg" alt="Happy Birthday Hero" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Floating Scroll Down Indicator -->
+            <div class="scroll-down-indicator" id="scroll-down">
+                <span class="scroll-text">Scroll Down</span>
+                <span class="scroll-subtext">Hoos u sii soco</span>
+                <i class="fas fa-chevron-down scroll-arrow"></i>
+            </div>
+        </section>
+
+        <!-- Section 2: Beautiful Memories Gallery Section -->
+        <section id="memories" class="memories section-padding">
+            <div class="section-header scroll-reveal slide-up text-center">
+                <h2 class="section-title">Beautiful Memories ❤️</h2>
+                <h3 class="section-title-somali">Xusuuso Qurux Badan 📸</h3>
+                <p class="section-subtitle">
+                    "Qof walba wuxuu leeyahay xusuuso gaar ah oo qalbiga ku sii nagaada. Sawir kasta wuxuu xanbaarsan yahay sheeko iyo farxad aan la ilaawi karin."<br>
+                    <span class="sub-en">"Every picture tells a beautiful story. These moments represent happiness, memories, and unforgettable experiences."</span>
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Image 1 -->
+                <div class="gallery-item polaroid-card scroll-reveal zoom-in" data-index="0">
+                    <div class="img-wrapper">
+                        <img src="images/images1.jpeg" alt="Beautiful Smile" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="caption">Beautiful Smile ❤️</h4>
+                        <p class="card-desc">Xusuus gaar ah oo qalbiga ku sii nagaada</p>
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="gallery-item polaroid-card scroll-reveal zoom-in" data-index="1" style="transition-delay: 100ms;">
+                    <div class="img-wrapper">
+                        <img src="images/images2.jpeg" alt="Special Moment" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="caption">Special Moment ✨</h4>
+                        <p class="card-desc">Farxad iyo qosol aan waligeed la ilaawi karin</p>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="gallery-item polaroid-card scroll-reveal zoom-in" data-index="2" style="transition-delay: 200ms;">
+                    <div class="img-wrapper">
+                        <img src="images/images3.jpeg" alt="Forever Memory" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="caption">Forever Memory 💕</h4>
+                        <p class="card-desc">Maalmo gaar ah oo la wadaagay sheeko qurux badan</p>
+                    </div>
+                </div>
+                <!-- Image 4 -->
+                <div class="gallery-item polaroid-card scroll-reveal zoom-in" data-index="3" style="transition-delay: 300ms;">
+                    <div class="img-wrapper">
+                        <img src="images/images4.jpeg" alt="Happy Day" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="caption">Happy Day 🎉</h4>
+                        <p class="card-desc">Wadajir iyo dabaaldeg qalbiga farxad ka buuxiya</p>
+                    </div>
+                </div>
+                <!-- Image 5 -->
+                <div class="gallery-item polaroid-card scroll-reveal zoom-in" data-index="4" style="transition-delay: 400ms;">
+                    <div class="img-wrapper">
+                        <img src="images/images5.jpeg" alt="Unforgettable" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="caption">Unforgettable 🌹</h4>
+                        <p class="card-desc">Dhaqan iyo xusuus mar walba noolaan doonta</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Memory Story Timeline Section -->
+        <section id="timeline" class="timeline-section section-padding">
+            <div class="section-header scroll-reveal slide-up text-center">
+                <h2 class="section-title">Our Beautiful Story ❤️</h2>
+                <h3 class="section-title-somali">Sheekadeena Quruxda Badan</h3>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <!-- Memory One -->
+                <div class="timeline-item scroll-reveal fade-right">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-content glass-card hover-lift">
+                        <div class="timeline-img-wrapper">
+                            <img src="images/images1.jpeg" alt="First Beautiful Memory" loading="lazy">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">Memory 01</span>
+                            <h3 class="timeline-item-title">First Beautiful Memory ❤️</h3>
+                            <p class="timeline-desc-somali">"Bilowgii xusuus qurux badan oo qalbiga ku reebtay farxad."</p>
+                            <p class="timeline-desc-english">"The beginning of a beautiful memory that will always remain special."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory Two -->
+                <div class="timeline-item timeline-inverted scroll-reveal fade-left">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content glass-card hover-lift">
+                        <div class="timeline-img-wrapper">
+                            <img src="images/images2.jpeg" alt="Happy Moments" loading="lazy">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">Memory 02</span>
+                            <h3 class="timeline-item-title">Happy Moments 😊</h3>
+                            <p class="timeline-desc-somali">"Qosol iyo farxad waa waxyaabaha nolosha ka dhiga mid qurux badan."</p>
+                            <p class="timeline-desc-english">"Small moments become the biggest memories."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory Three -->
+                <div class="timeline-item scroll-reveal fade-right">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-content glass-card hover-lift">
+                        <div class="timeline-img-wrapper">
+                            <img src="images/images4.jpeg" alt="Special Days" loading="lazy">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">Memory 03</span>
+                            <h3 class="timeline-item-title">Special Days 🎉</h3>
+                            <p class="timeline-desc-somali">"Maalmo gaar ah oo aan waligood la ilaawi doonin."</p>
+                            <p class="timeline-desc-english">"Beautiful days that will always stay in our hearts."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Special Letter Section -->
+        <section id="letter" class="letter-section section-padding">
+            <div class="letter-wrapper scroll-reveal fade-up">
+                <div class="section-header text-center">
+                    <h2 class="section-title">A Special Letter For You 💌</h2>
+                    <h3 class="section-title-somali">Dhalasho Wacan ❤️</h3>
+                </div>
+
+                <!-- Closed Envelope Experience -->
+                <div id="envelope-container" class="envelope-container text-center">
+                    <div class="envelope-box hover-lift">
+                        <div class="envelope-ribbon"></div>
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="heart-seal">❤️</div>
+                            <p class="envelope-subtext">Tap to open your birthday surprise</p>
+                        </div>
+                    </div>
+                    <div class="letter-controls text-center mt-30">
+                         <button id="btn-open-letter" class="btn btn-primary ripple-btn">Open My Letter 💌</button>
+                    </div>
+                </div>
+
+                <!-- Opened Full Paper Letter Experience (Revealed on Click) -->
+                <div id="opened-letter-paper" class="opened-letter-paper hidden">
+                    <div class="letter-paper-header">
+                        <span class="paper-stamp">💌 Special Gift</span>
+                        <h3 class="paper-title">A Special Letter For You</h3>
+                        <div class="paper-divider"></div>
+                    </div>
+                    <div id="typewriter-container" class="typewriter-text">
+                        <!-- Typewriter message auto-filled here -->
+                    </div>
+                    <div class="paper-footer text-center">
+                        <span class="paper-signature">With Love & Best Wishes ❤️</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Birthday Countdown Section -->
+        <section id="countdown" class="countdown-section section-padding text-center">
+            <div class="section-header scroll-reveal slide-up">
+                <h2 class="section-title">The Celebration Begins Soon ⏳</h2>
+                <h3 class="section-title-somali">Dabaaldeggu Wuu Bilaabanayaa 🎉</h3>
+            </div>
+            <div class="countdown-container glass-card scroll-reveal zoom-in">
+                <div class="countdown-item">
+                    <span id="cd-days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="cd-hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="cd-minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="cd-seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            <div id="countdown-message" class="countdown-message hidden">
+                <h3>🎉 Happy Birthday! 🎂</h3>
+            </div>
+        </section>
+
+        <!-- Section 6: Interactive Birthday Cake Section -->
+        <section id="cake" class="cake-section section-padding text-center">
+            <div class="section-header scroll-reveal slide-up">
+                <h2 class="section-title">Make A Wish 🎂</h2>
+                <h3 class="section-title-somali">Samee Rabitaankaaga ❤️</h3>
+            </div>
+            
+            <div class="cake-container scroll-reveal zoom-in">
+                <div class="cake">
+                    <div class="candles-container">
+                        <div class="candle c1"><div class="flame"></div></div>
+                        <div class="candle c2"><div class="flame"></div></div>
+                        <div class="candle c3"><div class="flame"></div></div>
+                    </div>
+                    <div class="layer layer-top">
+                        <div class="drip drip-1"></div><div class="drip drip-2"></div><div class="drip drip-3"></div>
+                    </div>
+                    <div class="layer layer-middle">
+                        <div class="drip drip-1"></div><div class="drip drip-2"></div><div class="drip drip-3"></div>
+                    </div>
+                    <div class="layer layer-bottom"></div>
+                </div>
+            </div>
+
+            <div class="cake-controls scroll-reveal fade-up">
+                <button id="btn-light" class="btn btn-secondary ripple-btn">Light Candles 🕯</button>
+                <button id="btn-blow" class="btn btn-primary ripple-btn" disabled>Blow Candles 💨</button>
+                <button id="btn-reset" class="btn btn-secondary ripple-btn">Reset 🔄</button>
+            </div>
+
+            <div id="cake-message" class="cake-message hidden">
+                <h2 class="cake-msg-title">Happy Birthday 🎉❤️</h2>
+                <h3 class="cake-msg-sub">Dhalasho Wacan</h3>
+                <p>May all your dreams come true.</p>
+            </div>
+        </section>
+
+        <!-- Section 7: Surprise Gift Box Section -->
+        <section id="gift" class="gift-section section-padding text-center">
+            <div class="section-header scroll-reveal slide-up">
+                <h2 class="section-title">A Special Surprise 🎁</h2>
+                <h3 class="section-title-somali">Hadiyad Gaar Ah ❤️</h3>
+            </div>
+
+            <div class="gift-container scroll-reveal zoom-in">
+                <div id="gift-box" class="gift-box">
+                    <div class="gift-lid">
+                        <div class="gift-bow"></div>
+                    </div>
+                    <div class="gift-body"></div>
+                </div>
+                <div id="gift-glow" class="gift-glow"></div>
+            </div>
+
+            <div class="gift-controls scroll-reveal fade-up">
+                <button id="btn-open-gift" class="btn btn-primary ripple-btn">Open Gift 🎁</button>
+            </div>
+
+            <div id="gift-message" class="gift-message hidden">
+                <h2 class="gift-msg-title">Surprise! ❤️</h2>
+                <p class="gift-desc-somali">"Waxaan kuu rajaynayaa farxad, caafimaad iyo guul aan dhammaad lahayn."</p>
+                <p class="gift-desc-english">"May your life always be filled with happiness, success and beautiful moments."</p>
+            </div>
+        </section>
+
+        <!-- Section 8: Special Wishes Section -->
+        <section id="wishes" class="wishes-section section-padding">
+            <div class="section-header scroll-reveal slide-up text-center">
+                <h2 class="section-title">Special Wishes ✨</h2>
+            </div>
+            
+            <div class="wishes-grid">
+                <div class="wish-card glass-card hover-lift scroll-reveal fade-up">
+                    <i class="fas fa-star wish-icon"></i>
+                    <p>Dhalasho Wacan. Ilaahay ha kuu barakeeyo noloshaada.</p>
+                </div>
+                <div class="wish-card glass-card hover-lift scroll-reveal fade-up" style="transition-delay: 100ms;">
+                    <i class="fas fa-heart wish-icon"></i>
+                    <p>May every year bring more happiness. Happy Birthday.</p>
+                </div>
+                <div class="wish-card glass-card hover-lift scroll-reveal fade-up" style="transition-delay: 200ms;">
+                    <i class="fas fa-crown wish-icon"></i>
+                    <p>May success always follow you. Stay blessed.</p>
+                </div>
+                <div class="wish-card glass-card hover-lift scroll-reveal fade-up" style="transition-delay: 300ms;">
+                    <i class="fas fa-sun wish-icon"></i>
+                    <p>Enjoy your beautiful journey. Have an amazing day!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Final Celebration Section -->
+        <section id="final-celebration" class="final-celebration-section section-padding text-center">
+            <div class="glass-card final-celebration-card scroll-reveal zoom-in">
+                <h2 class="final-title">Happy Birthday ❤️🎉</h2>
+                <h3 class="final-subtitle">Dhalasho Wacan ❤️</h3>
+                <p class="final-msg-english">"May this special day bring you endless happiness, success, peace and unforgettable memories."</p>
+                <p class="final-msg-somali">"Maalintan gaarka ah ha kuu noqoto bilow farxad, guul iyo riyooyin rumooba."</p>
+                <div class="final-controls mt-30">
+                    <button id="btn-replay-celebration" class="btn btn-primary ripple-btn">Replay Celebration 🎉</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer glass-footer">
+        <div class="footer-content">
+            <h3 class="footer-title">Happy Birthday ❤️</h3>
+            <p class="footer-tagline">Made with Love | Have a Wonderful Celebration</p>
+            
+            <div class="social-icons">
+                <a href="https://github.com/AbshirAdan" class="social-icon hover-lift" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/share/1BWYMRQhwX/?mibextid=wwXIfr" class="social-icon hover-lift" aria-label="Facebook Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/abshir_adan_hassan?igsh=MTFnOHRiOXRhdnpkbQ%3D%3D&utm_source=qr" class="social-icon hover-lift" aria-label="Instagram Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@abshir_adan_hassan" class="social-icon hover-lift" aria-label="TikTok Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Thank You For Visiting | &copy; 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn-icon ripple-btn" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" aria-label="Close Gallery">&times;</span>
+        <div class="lightbox-content">
+            <button class="nav-btn prev-btn" aria-label="Previous Image"><i class="fas fa-chevron-left"></i></button>
+            <div class="lightbox-img-wrapper">
+                <img id="lightbox-img" src="" alt="Gallery Image">
+            </div>
+            <button class="nav-btn next-btn" aria-label="Next Image"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="lightbox-counter" id="lightbox-counter">1 / 5</div>
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- Letter Text Data for Typewriter (Hidden) -->
+    <div id="letter-source-text" style="display: none;">
+Dhalasho Wacan ❤️
+
+Maalintan gaarka ah waxaan kuu rajaynayaa farxad, caafimaad, guul iyo nolol qurux badan.
+
+Ilaahay ha kuu sahlo dhammaan riyooyinkaaga, hana kuu barakeeyo noloshaada.
+
+Waxaad tahay qof gaar ah oo mudan jacayl, farxad iyo xasuuso qurux badan.
+
+Ku raaxayso maalintaada gaarka ah.
+
+🌸 🌸 🌸
+
+Happy Birthday ❤️
+
+On this special day, I wish you endless happiness, success, good health and beautiful moments.
+
+May all your dreams come true and may your life always be blessed with happiness.
+
+You are a special person who deserves love, joy and unforgettable memories.
+
+Enjoy your beautiful day.
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
